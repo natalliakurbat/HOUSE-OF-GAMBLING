@@ -120,6 +120,50 @@ h1 span {
     text-align: center;
 }
 
+.chips {
+    width: 100%;
+    max-width: 333.8px;
+    height: 960px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.chips div {
+    display: inline-block;
+    width: 100%;
+    max-width: 100px;
+}
+
+.line-two {
+    position: relative;
+    animation: animation-chaps-up 50s linear infinite;
+}
+
+.animation-down {
+    position: relative;
+    animation: animation-chaps-down 50s linear infinite;
+}
+
+@keyframes animation-chaps-down {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 900px;
+    }
+}
+
+@keyframes animation-chaps-up {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 900px;
+    }
+}
+
 .posts {
     border: 3px solid #478BF9;
     border-radius: 100px;
@@ -129,6 +173,7 @@ h1 span {
     padding-left: 24px;
     padding-right: 17px;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     scroll-margin-right: 16px;
 }
 
