@@ -8,7 +8,8 @@ html {
     font-size: 32px;
 }
 
-body {
+body,
+.language {
     font-family: "Lexend", sans-serif;
     background-color: #1E1231;
     color: #fff;
@@ -24,6 +25,17 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
 }
 
 .logo {
@@ -41,7 +53,8 @@ header {
     color: #9DADF2;
 }
 
-.enter a {
+.enter a,
+.language {
     border: 2px solid #9DADF2;
     border-radius: 34px;
     text-transform: uppercase;
@@ -65,17 +78,21 @@ header {
     margin-right: 32px;
 }
 
-a {
+a,
+.language {
     text-decoration: none;
     color: #fff;
+}
+
+.language {
+    margin-right: 14px;
+    line-height: 20px;
+    font-size: 0.5rem;
 }
 
 main {
     margin: auto 140px;
     height: 960px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .partner {
@@ -213,7 +230,8 @@ h2 {
     margin-bottom: 24px;
 }
 
-.posts article {
+.posts a {
+    display: block;
     text-align: left;
     width: 100%;
     max-width: 467px;
@@ -223,12 +241,12 @@ h2 {
     background-color: #1E1231;
 }
 
-.posts article:first-child {
+.posts a:first-child {
     border-color: #478BF9;
     background-color: #478BF9;
 }
 
-.posts article:not(:last-child) {
+.posts a:not(:last-child) {
     margin-bottom: 16px;
 }
 
@@ -262,6 +280,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
+    z-index: 2;
 }
 
 .pages a:not(:last-child) {
@@ -288,4 +308,14 @@ footer {
 
 .links a img:hover {
     filter: hue-rotate(40deg);
+}
+
+.background-img {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    overflow: hidden;
+    top: 0px;
+    height: 1218px;
 }
