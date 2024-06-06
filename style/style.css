@@ -13,6 +13,7 @@ body,
     font-family: "Lexend", sans-serif;
     background-color: #1E1231;
     color: #fff;
+    margin: 0 auto;
 }
 
 header {
@@ -36,6 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    margin: 0 auto;
 }
 
 .logo {
@@ -318,4 +320,116 @@ footer {
     overflow: hidden;
     top: 0px;
     height: 1218px;
+    width: 100%;
+}
+
+@media screen and (max-width:1574px) {
+    main {
+        margin: auto 50px;
+    }
+    header {
+        margin: 16px 50px 0 50px;
+    }
+    footer {
+        padding: 40px 50px 24px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    html {
+        font-size: 28px;
+    }
+    .logo {
+        width: 100%;
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width:1260px) {
+    h3 {
+        font-size: 0.5rem;
+        line-height: 20px;
+        font-weight: 400;
+        margin: 15px 35px 6px;
+        height: 60px;
+    }
+    .posts {
+        height: 421px;
+    }
+    .posts a {
+        width: 100%;
+        max-width: 274px;
+        height: 112px;
+    }
+    .date {
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width:1190px) {
+    .logo {
+        width: 100%;
+        max-width: 50px;
+    }
+    .chips div img {
+        width: 100%;
+        max-width: 80px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    h1 {
+        font-size: 1.64rem;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 1.14rem;
+        line-height: 40px;
+    }
+    .menu a:not(:last-child) {
+        margin-right: 16px;
+    }
+    .partner p {
+        font-size: 0.71rem;
+        line-height: 26px;
+        margin: 12px 0 24px;
+    }
+    .partner a {
+        width: 300px;
+        height: 53px;
+        font-size: 0.64rem;
+        line-height: 53px;
+    }
+    .logo {
+        width: 100%;
+        max-width: 1px;
+    }
+    .pages a:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .wrapper {
+        flex-direction: column;
+        margin: 70px 0;
+    }
+    .partner {
+        text-align: center;
+    }
+    .partner a {
+        margin: 0 auto;
+    }
+    .chips {
+        transform: rotate(90deg);
+        height: 165px;
+        width: 165px;
+        overflow: hidden;
+    }
+    main {
+        height: 100%;
+    }
+    .background-img {
+        flex-direction: column;
+    }
 }
