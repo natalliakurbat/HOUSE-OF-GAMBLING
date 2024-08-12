@@ -88,6 +88,62 @@ a,
     font-size: 0.5rem;
 }
 
+
+/*Создаем иконку-бургер*/
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 20;
+    align-items: center;
+    width: 21px;
+    height: 14px;
+}
+
+.burger span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    /*transform: scale(1);*/
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+
+/*Добавляем класс active для онимации иконки бургера*/
+
+.burger.active span {
+    transform: scale(0);
+    /*что бы средняя полоска исчезла*/
+}
+
+.burger.active::before {
+    top: 45%;
+    left: -8%;
+    transform: rotate(-45deg) translate(0, 50%);
+}
+
+.burger.active::after {
+    bottom: 44%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
 main {
     margin: auto 140px;
     height: 960px;
@@ -488,11 +544,11 @@ footer {
     .partner a {
         margin: 0 auto;
     }
-    .line-one,
+    /*.line-one,
     .line-two,
     .line-three {
         transform: rotate(90deg);
-    }
+    }*/
     @keyframes animation-chaps-down {
         0% {
             left: 0;
@@ -509,10 +565,10 @@ footer {
             right: 900px;
         }
     }
-    .chips {
+    /*.chips {
         width: 100%;
         height: 165px;
-    }
+    }*/
     /*.chips {
         transform: rotate(90deg);
         height: 165px;
@@ -557,6 +613,27 @@ footer {
         width: 27px;
         margin-top: 8px;
     }
+}
+
+@media screen and (max-width:790px) {
+    /*.burger {
+        display: flex;
+    }*/
+    /* .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 96px 10px;
+        background-color: #191D0A;
+    }*/
 }
 
 @media screen and (max-width:768px) {}
